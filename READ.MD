@@ -9,7 +9,7 @@ Aplikasi Python sederhana untuk preview kamera yang otomatis memburamkan (blur) 
 Jika Anda baru saja mengkloning atau mengunduh project ini dari GitHub, ikuti langkah-langkah di bawah ini untuk menyiapkan lingkungan Python Anda:
 
 ### 1. Masuk ke Folder Proyek
-Buka Terminal macOS Anda dan masuk ke direktori proyek:
+Buka Terminal/Command Prompt Anda dan masuk ke direktori proyek:
 ```bash
 cd camera_blur_python
 ```
@@ -17,14 +17,27 @@ cd camera_blur_python
 ### 2. Buat Lingkungan Virtual (Virtual Environment)
 Buat virtual environment baru bernama `venv` agar library yang diinstal terisolasi:
 ```bash
+# macOS / Linux / Windows
 python3 -m venv venv
 ```
+*(Catatan di Windows: Jika perintah `python3` tidak ditemukan, gunakan perintah `python -m venv venv`).*
 
 ### 3. Aktifkan Virtual Environment
-```bash
-source venv/bin/activate
-```
-*(Setelah aktif, Anda akan melihat tanda `(venv)` di sebelah kiri prompt Terminal Anda).*
+Sesuaikan perintah dengan sistem operasi dan terminal yang Anda gunakan:
+
+* **macOS / Linux (Terminal / Git Bash)**:
+  ```bash
+  source venv/bin/activate
+  ```
+* **Windows (Command Prompt / CMD)**:
+  ```cmd
+  venv\Scripts\activate
+  ```
+* **Windows (PowerShell)**:
+  ```powershell
+  .\venv\Scripts\Activate.ps1
+  ```
+*(Setelah aktif, Anda akan melihat tanda `(venv)` di sebelah kiri prompt Terminal/CMD Anda).*
 
 ### 4. Install Semua Dependency Library
 Gunakan file `requirements.txt` untuk mengunduh semua library yang diperlukan (OpenCV & MediaPipe):
@@ -41,14 +54,15 @@ pip install -r requirements.txt
 
 ## 🛠️ Cara Menjalankan Program (Setelah Instalasi Selesai)
 
-Setelah melakukan persiapan di atas, setiap kali Anda ingin menjalankan program di lain waktu, cukup jalankan perintah ini di Terminal Anda:
+Setelah melakukan persiapan di atas, setiap kali Anda ingin menjalankan program di lain waktu, cukup jalankan perintah ini di Terminal/CMD Anda:
 
 ```bash
 # 1. Masuk ke folder proyek
 cd camera_blur_python
 
-# 2. Aktifkan virtual environment
-source venv/bin/activate
+# 2. Aktifkan virtual environment (sesuaikan perintah OS Anda di atas)
+# Contoh Windows (CMD): venv\Scripts\activate
+# Contoh macOS: source venv/bin/activate
 
 # 3. Jalankan aplikasi
 python main.py
